@@ -40,17 +40,10 @@
     border-color: #0070f3;
 }
 
-/* .button {
 
-    background-color: green;
-    color: white
-} */
-
-/* .form>button {} */
 
 .listBox {
-    /* border: 1px solid;
-    border-color: #0070f3; */
+
     display: flex;
     justify-content: flex-start;
     padding: 0 4px;
@@ -77,13 +70,7 @@
     flex: 1;
 }
 
-/* 
-.listBox>ul>li:hover,
-.listBox>ul>li:focus,
-.listBox>ul>li:active {
-    color: #0070f3;
-    border-color: #0070f3;
-} */
+
 .textVotes {
     display: flex;
     flex-direction: row;
@@ -96,7 +83,6 @@
 .textVotes>span:focus,
 .textVotes>span:active {
     color: #0070f3;
-    /* border-color: #0070f3; */
 }
 
 .actionButtons {
@@ -118,10 +104,6 @@
 .actionButtons>button:active {
 
     color: brown;
-    /* color: #0070f3;
-    border-color: #0070f3; */
-    /* border: 2px solid; */
-    /* border-radius: 50%; */
-    /* padding: 5px; */
+
 
 }
