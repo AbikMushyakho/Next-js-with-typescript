@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    justify-content: center;
+    /* padding: 0px 0px; */
+    position: sticky;
+    background-color: skyblue;
+    min-height: 70px;
+}
+
+.header>ul {
+    list-style-type: none;
+    width: 50%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.header>ul>li {
+
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.header>ul>li:hover {
+
+    font-size: 20px;
+    font-weight: 700;
+    background-color: antiquewhite;
+    padding: 0 5px;
+    border-radius: 5px;
+
+}
