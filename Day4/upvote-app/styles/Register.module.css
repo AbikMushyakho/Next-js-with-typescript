@@ -1,0 +1,42 @@
+.main {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+}
+
+.register {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 400px;
+    border: 2px solid #eaeaea;
+    border-radius: 10px;
+
+    padding: 1.5rem;
+    /* border-color: red; */
+}
+
+.register>label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.register>input {
+    padding: 8px;
+}
+
+.register>input[type=submit] {
+    font-style: bold;
+}
+
+.register>input[type=submit]:hover,
+.register>input[type=submit]:focus,
+.register>input[type=submit]:active {
+    color: #0070f3;
+    border-color: #0070f3;
+}

@@ -85,7 +85,7 @@ export default function Main(): JSX.Element {
         </form>
 
         <div className={styles.listBox}>
-          <ul>
+          <ul className={styles.unordered}>
             {isLoading || AddMutation.isLoading ? (
               <li>Loading...</li>
             ) : isError || AddMutation.isError ? (
@@ -94,48 +94,49 @@ export default function Main(): JSX.Element {
               data.map((tx: upvote) => (
                 <li key={tx.id}>
                   <div className={styles.textVotes}>
-                    <span>{tx.text}</span>
-                    <span> {tx.vote} votes</span>
-                  </div>
-                  {UpdateMutation.isLoading && selectedItem === tx.id && (
+                    <span className={styles.text}>{tx.text}</span>
+                    <div className={styles.votesAndLoading}>
                     <span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlnsXlink="http://www.w3.org/1999/xlink"
-                        style={{
-                          margin: "auto",
-                          background: "none",
-                          display: "block",
-                          shapeRendering: "auto",
-                        }}
-                        width="20px"
-                        height="20px"
-                        viewBox="0 0 100 100"
-                        preserveAspectRatio="xMidYMid"
-                      >
-                        <path
-                          d="M7 50A43 43 0 0 0 93 50A43 47 0 0 1 7 50"
-                          fill="#e15b64"
-                          stroke="none"
+                      {UpdateMutation.isLoading && selectedItem === tx.id && (
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          style={{
+                            margin: "auto",
+                            background: "none",
+                            display: "block",
+                            shapeRendering: "auto",
+                          }}
+                          width="20px"
+                          height="20px"
+                          viewBox="0 0 100 100"
+                          preserveAspectRatio="xMidYMid"
                         >
-                          <animateTransform
-                            attributeName="transform"
-                            type="rotate"
-                            dur="0.46511627906976744s"
-                            repeatCount="indefinite"
-                            keyTimes="0;1"
-                            values="0 50 52;360 50 52"
-                          ></animateTransform>
-                        </path>
-                      </svg>
+                          <path
+                            d="M7 50A43 43 0 0 0 93 50A43 47 0 0 1 7 50"
+                            fill="#e15b64"
+                            stroke="none"
+                          >
+                            <animateTransform
+                              attributeName="transform"
+                              type="rotate"
+                              dur="0.46511627906976744s"
+                              repeatCount="indefinite"
+                              keyTimes="0;1"
+                              values="0 50 52;360 50 52"
+                            ></animateTransform>
+                          </path>
+                        </svg>
+                      )}
                     </span>
-                  )}
-                  <div className={styles.actionButtons}>
-                    {/* upvote */}
+                    <span> {tx.vote} votes</span>
+                    </div>
+                  </div>
 
+                  <div className={styles.actionButtons}>
                     <BsFillArrowDownCircleFill
                       color="red"
-                      size="20px"
+                      // size="20px"
                       className={styles.down}
                       onClick={(e) => {
                         handleDownVoteAction({ id: tx.id, vote: tx.vote });
@@ -147,7 +148,7 @@ export default function Main(): JSX.Element {
 
                     <BsFillArrowUpCircleFill
                       color="green"
-                      size="20px"
+                      // size="20px"
                       className={styles.up}
                       onClick={(e) => {
                         handleUpvoteAction({ id: tx.id, vote: tx.vote });
