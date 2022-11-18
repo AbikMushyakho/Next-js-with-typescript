@@ -15,3 +15,10 @@ Day 2 => Typescript overview:
 -Narrowing
 
 => upvote app => 
+
+
+Day 3 => Upvote with React Query
+
+Day 4=> login signup with cookies and completion of app
+
+Upvote App Demo => https://upvote-app.vercel.app/
