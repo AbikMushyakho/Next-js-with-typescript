@@ -1,0 +1,130 @@
+.mainContainer {
+  min-height: 40vh;
+  margin: 2rem;
+
+  .Projectcards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+    .boxes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+    }
+    .addBox {
+      padding: 0 10px;
+      position: absolute;
+      min-width: 15rem;
+      top: 20.5rem;
+      left: 2rem;
+
+      .addShowButton {
+        width: 100%;
+        border: none;
+        background: none;
+        background-color: #08941f;
+        padding: 6px;
+        border-radius: 5px;
+        color: white;
+        &:hover {
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+      .addForm {
+        // max-width: 15rem;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+        // border: 2px solid red;
+        .addInput {
+          padding: 5px;
+          border-radius: 5px;
+          width: 80%;
+        }
+        .addButton {
+          padding: 5px;
+          border: none;
+          background: none;
+          border-radius: 5px;
+          background-color: #08941f;
+          width: 20%;
+          color: white;
+          &:hover {
+            cursor: pointer;
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+}
+.droppable {
+  min-width: 15rem;
+  padding: 10px 10px;
+  border: 1px solid black;
+  // border-bottom: none;
+  // border-radius: 5px;
+  list-style-type: none;
+  text-align: center;
+  // margin: 1rem;
+  min-height: 20rem;
+
+  .columnHeading {
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.4rem 0;
+    font-weight: bolder;
+  }
+}
+
+.item {
+  background-color: #08941f;
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: grab;
+  padding: 6px;
+  font-size: 16px;
+  text-align: start;
+}
+@media screen and (max-width: 332px) {
+  .Projectcards {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  .boxes {
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    overflow: hidden;
+  }
+  .addBox {
+    min-width: 80% !important;
+    top: 18rem!important;
+  }
+  .addShowButton {
+    width: 100% !important;
+ 
+  }
+  .addForm {
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    flex-direction: column;
+  }
+
+  .addInput {
+    width: 100%!important;
+  }
+  .addButton {
+    width: 100%!important;
+  }
+}
